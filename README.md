@@ -4,7 +4,7 @@ This script uses Posh-ACME and Let's Encrypt to update IIS certificate using the
 
 ### First Time Setup
 
-If running Windows 2012 / Windows 2012 R2, you must first install PowerShell 5.1, available at [https://aka.ms/WMF5Download](https://aka.ms/WMF5Download). For Windows 2012 R2 and Windows 2016, set TLS to 1.2.  
+If running Windows 2012 / Windows 2012 R2, you must first install PowerShell 5.1, available at [https://aka.ms/WMF5Download](https://aka.ms/WMF5Download). Also make sure .NET Framework 4.7.1 or greater is installed (available at [https://www.microsoft.com/en-us/download/details.aspx?id=56116]https://www.microsoft.com/en-us/download/details.aspx?id=56116).  For Windows 2012 R2 and Windows 2016, set TLS to 1.2.  
 Run command 
 ```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
