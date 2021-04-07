@@ -43,7 +43,7 @@ if($cert){
     $cert | New-Item IIS:\SSLBindings\0.0.0.0:443
     
     Logging -Message "Restarting IIS"
-    iisreset / noforce
+    invoke-command -scriptblock {iisreset}
     
     # Remove old certs
     ls Cert:\LocalMachine\My | ? Subject -eq "CN=$MainDomain" | ? NotAfter -lt $(get-date) | remove-item -Force
